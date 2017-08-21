@@ -45,16 +45,16 @@ function getEntityMarkdown(
       return html;
     }
   }
-  if (entity.type === 'MENTION') {
+  if (entity.type.toUpperCase() === 'MENTION') {
     return `[${text}](${entity.data.url})`;
   }
-  if (entity.type === 'LINK') {
+  if (entity.type.toUpperCase() === 'LINK') {
     return `[${text}](${entity.data.url})`;
   }
-  if (entity.type === 'IMAGE') {
+  if (entity.type.toUpperCase() === 'IMAGE') {
     return `![${entity.data.alt || ''}](${entity.data.src})`;
   }
-  if (entity.type === 'EMBEDDED_LINK') {
+  if (entity.type.toUpperCase() === 'EMBEDDED_LINK') {
     return `<iframe width="${entity.data.width}" height="${entity.data.height}" src="${entity.data.src}" frameBorder="0" allowFullScreen />`;
   }
   return text;
