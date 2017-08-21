@@ -1,3 +1,11 @@
+# DraftJS TO Markdown:imageFix - fix for draft-js-image-plugin
+This is forked repository of [DraftJS TO Markdown](https://github.com/jpuri/draftjs-to-markdown). 
+
+When DraftJS TO Markdown used with [draft-js-image-plugin](https://www.npmjs.com/package/draft-js-image-plugin), it does not convert image to markdown because it checks whether an entity's type is 'IMAGE'. but draft-js-image-plugin saves entity type as 'image' so it doesn't work.
+
+Therefore I simply eased case sensitivity when converting entity to markdown.
+
+
 # DraftJS TO Markdown
 
 A library for converting DraftJS editor content to markdown.
